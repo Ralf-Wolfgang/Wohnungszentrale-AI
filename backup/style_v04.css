@@ -104,21 +104,15 @@ html, body {
   opacity: 0.66;
 }
 
-.energy-column {
-  margin-top: 105px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .sun-section {
+  margin-top: 170px;
   text-align: center;
 }
 
 .sun-wrap {
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 260px;
+  height: 260px;
   margin: 0 auto;
 }
 
@@ -168,20 +162,20 @@ html, body {
 }
 
 .cloud-a {
-  left: 5px;
-  top: 108px;
+  left: 8px;
+  top: 112px;
 }
 
 .cloud-b {
-  right: 5px;
-  top: 128px;
+  right: 8px;
+  top: 132px;
   transform: scale(0.8);
   opacity: 0.55;
 }
 
 .pv-power {
-  margin-top: 8px;
-  font-size: 62px;
+  margin-top: 10px;
+  font-size: 64px;
   font-weight: 900;
   text-shadow: 0 0 24px rgba(255,255,255,0.3);
 }
@@ -193,109 +187,7 @@ html, body {
   text-shadow: 0 0 18px rgba(250,204,21,0.5);
 }
 
-.flow-line {
-  position: relative;
-  width: 10px;
-  height: 90px;
-  margin: 22px 0 18px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.12);
-}
-
-.flow-line i {
-  position: absolute;
-  left: -8px;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  animation: flowDown 2.2s linear infinite;
-}
-
-.flow-line i:nth-child(2) {
-  animation-delay: 0.7s;
-}
-
-.flow-line i:nth-child(3) {
-  animation-delay: 1.4s;
-}
-
-.gold-flow i {
-  background: #facc15;
-  box-shadow: 0 0 24px #facc15;
-}
-
-.battery-ring {
-  width: 310px;
-  height: 310px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background:
-    conic-gradient(#57ff4b 0deg 311deg, rgba(255,255,255,0.12) 311deg 360deg);
-  box-shadow:
-    0 0 65px rgba(87,255,75,0.55),
-    inset 0 0 30px rgba(87,255,75,0.12);
-  animation: batteryBreathe 4s ease-in-out infinite;
-}
-
-.battery-core {
-  width: 232px;
-  height: 232px;
-  border-radius: 50%;
-  background: rgba(3,8,18,0.94);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.battery-icon {
-  color: #57ff4b;
-  font-size: 30px;
-}
-
-.battery-soc {
-  margin-top: 6px;
-  font-size: 58px;
-  font-weight: 900;
-}
-
-.battery-kwh {
-  margin-top: 4px;
-  color: #57ff4b;
-  font-size: 29px;
-  font-weight: 800;
-}
-
-.battery-label {
-  margin-top: 4px;
-  opacity: 0.65;
-  font-size: 20px;
-}
-
-.battery-state {
-  margin-top: 16px;
-  padding: 10px 30px;
-  border-radius: 22px;
-  font-size: 25px;
-  color: #7cff66;
-  background: rgba(0,60,25,0.35);
-  border: 1px solid rgba(87,255,75,0.75);
-  box-shadow: 0 0 32px rgba(87,255,75,0.22);
-}
-
 @keyframes sunPulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.06); }
-}
-
-@keyframes batteryBreathe {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.025); }
-}
-
-@keyframes flowDown {
-  0% { top: -14px; opacity: 0; }
-  20% { opacity: 1; }
-  100% { top: 78px; opacity: 0; }
 }
