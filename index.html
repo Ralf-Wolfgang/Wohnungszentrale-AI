@@ -12,15 +12,40 @@
       <div>
         <div class="place">⌂ Winhöring</div>
         <div class="date" id="dateLine">--</div>
-        <div class="voice">🎙 OK Google · Wohnung Befehle</div>
+        <div class="voice">▣ OK Google · Wohnung Befehle</div>
       </div>
-      <div class="mic">🎤</div>
+      <div class="mic">▯</div>
     </header>
 
-    <section class="center-card">
-      <div class="title">Wohnungszentrale AI</div>
-      <div class="version">V0.2 · Header aktiv</div>
-      <div class="status">CSS geladen · Hochformat stabil</div>
+    <section class="weather-row">
+      <article class="weather-card">
+        <div class="weather-icon">▯</div>
+        <div>
+          <div class="card-title">PV-Prognose</div>
+          <div class="card-value green">13,8 kWh</div>
+          <div class="card-sub">Wetterlage: teils bewölkt</div>
+        </div>
+      </article>
+
+      <article class="weather-card">
+        <div class="weather-icon">▯</div>
+        <div>
+          <div class="card-title">Sonnenuntergang</div>
+          <div class="card-value">21:18 Uhr</div>
+          <div class="card-sub">Regenradar später</div>
+        </div>
+      </article>
+    </section>
+
+    <section class="sun-section">
+      <div class="sun-wrap">
+        <div class="sun"></div>
+        <div class="cloud cloud-a"></div>
+        <div class="cloud cloud-b"></div>
+      </div>
+
+      <div class="pv-power">1842,6 W</div>
+      <div class="pv-label">PV-Erzeugung</div>
     </section>
   </main>
 
@@ -30,14 +55,10 @@
       const now = new Date();
       const day = days[now.getDay()];
       const date = now.toLocaleDateString("de-DE", {
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric"
+        day: "2-digit", month: "2-digit", year: "numeric"
       });
       const time = now.toLocaleTimeString("de-DE", {
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit"
+        hour: "2-digit", minute: "2-digit", second: "2-digit"
       });
       document.getElementById("dateLine").innerText = `${day} · ${date} · ${time}`;
     }

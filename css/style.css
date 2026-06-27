@@ -8,6 +8,10 @@ html, body {
   overflow: hidden;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .screen {
   width: 100vw;
   height: 100vh;
@@ -16,7 +20,6 @@ html, body {
     radial-gradient(circle at 50% 22%, rgba(255, 180, 0, 0.25), transparent 28%),
     radial-gradient(circle at 50% 55%, rgba(34, 197, 94, 0.18), transparent 34%),
     linear-gradient(180deg, #020617 0%, #061323 55%, #020617 100%);
-  box-sizing: border-box;
 }
 
 .header {
@@ -56,32 +59,135 @@ html, body {
   box-shadow: 0 0 44px rgba(0,170,255,0.8);
 }
 
-.center-card {
-  margin-top: 430px;
-  width: 82%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 48px;
-  border-radius: 36px;
+.weather-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 6px;
+}
+
+.weather-card {
+  min-height: 118px;
+  border-radius: 28px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
   background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.18);
-  box-shadow: 0 0 80px rgba(0,180,255,0.25);
-  text-align: center;
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow: 0 0 42px rgba(0,180,255,0.13);
+  backdrop-filter: blur(16px);
 }
 
-.title {
-  font-size: 56px;
-  font-weight: 900;
+.weather-icon {
+  font-size: 48px;
 }
 
-.version {
-  margin-top: 24px;
-  font-size: 32px;
+.card-title {
+  font-size: 22px;
+  opacity: 0.85;
+}
+
+.card-value {
+  margin-top: 6px;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.green {
   color: #6dff4b;
 }
 
-.status {
-  margin-top: 40px;
+.card-sub {
+  margin-top: 5px;
+  font-size: 18px;
+  opacity: 0.66;
+}
+
+.sun-section {
+  margin-top: 170px;
+  text-align: center;
+}
+
+.sun-wrap {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin: 0 auto;
+}
+
+.sun {
+  position: absolute;
+  inset: 28px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #fff7ad 0%, #fde047 28%, #fb923c 60%, rgba(251,146,60,0.05) 75%);
+  box-shadow:
+    0 0 55px #facc15,
+    0 0 130px rgba(249,115,22,0.85);
+  animation: sunPulse 4.5s ease-in-out infinite;
+}
+
+.cloud {
+  position: absolute;
+  z-index: 5;
+  width: 135px;
+  height: 48px;
+  border-radius: 40px;
+  background: linear-gradient(180deg, #e5e7eb, #64748b);
+  opacity: 0.72;
+  filter: drop-shadow(0 0 14px rgba(255,255,255,0.25));
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.cloud::before {
+  width: 62px;
+  height: 62px;
+  left: 20px;
+  top: -30px;
+}
+
+.cloud::after {
+  width: 78px;
+  height: 78px;
+  right: 12px;
+  top: -45px;
+}
+
+.cloud-a {
+  left: 8px;
+  top: 112px;
+}
+
+.cloud-b {
+  right: 8px;
+  top: 132px;
+  transform: scale(0.8);
+  opacity: 0.55;
+}
+
+.pv-power {
+  margin-top: 10px;
+  font-size: 64px;
+  font-weight: 900;
+  text-shadow: 0 0 24px rgba(255,255,255,0.3);
+}
+
+.pv-label {
+  margin-top: 4px;
   font-size: 26px;
   color: #facc15;
+  text-shadow: 0 0 18px rgba(250,204,21,0.5);
+}
+
+@keyframes sunPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
 }
