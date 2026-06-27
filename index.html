@@ -8,11 +8,42 @@
 </head>
 <body>
   <main class="screen">
-    <div class="card">
-      <div class="title">⌂ Wohnungszentrale AI</div>
-      <div class="subtitle">V0.1 · Design-Basis</div>
-      <div class="status">CSS geladen · Hochformat aktiv</div>
-    </div>
+    <header class="header">
+      <div>
+        <div class="place">⌂ Winhöring</div>
+        <div class="date" id="dateLine">--</div>
+        <div class="voice">🎙 OK Google · Wohnung Befehle</div>
+      </div>
+      <div class="mic">🎤</div>
+    </header>
+
+    <section class="center-card">
+      <div class="title">Wohnungszentrale AI</div>
+      <div class="version">V0.2 · Header aktiv</div>
+      <div class="status">CSS geladen · Hochformat stabil</div>
+    </section>
   </main>
+
+  <script>
+    function updateTime() {
+      const days = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+      const now = new Date();
+      const day = days[now.getDay()];
+      const date = now.toLocaleDateString("de-DE", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric"
+      });
+      const time = now.toLocaleTimeString("de-DE", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+      });
+      document.getElementById("dateLine").innerText = `${day} · ${date} · ${time}`;
+    }
+
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
 </body>
 </html>
