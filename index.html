@@ -8,6 +8,7 @@
 </head>
 <body>
   <main class="screen">
+
     <header class="header">
       <div>
         <div class="place">⌂ Winhöring</div>
@@ -37,33 +38,68 @@
       </article>
     </section>
 
-    <section class="energy-column">
-      <section class="sun-section">
-        <div class="sun-wrap">
-          <div class="sun"></div>
-          <div class="cloud cloud-a"></div>
-          <div class="cloud cloud-b"></div>
-        </div>
-
-        <div class="pv-power">1842,6 W</div>
-        <div class="pv-label">PV-Erzeugung</div>
-      </section>
-
-      <div class="flow-line gold-flow">
-        <i></i><i></i><i></i>
-      </div>
-
-      <section class="battery-ring">
-        <div class="battery-core">
-          <div class="battery-icon">▣</div>
-          <div class="battery-soc">86,4 %</div>
-          <div class="battery-kwh">4,42 kWh</div>
-          <div class="battery-label">Speicher</div>
-        </div>
-      </section>
-
-      <div class="battery-state">Lädt mit 1284,3 W</div>
+    <section class="ai-status">
+      ☀ Die Sonne lädt den Speicher mit 1842,6 W.
     </section>
+
+    <section class="main-grid">
+
+      <section class="energy-column">
+        <section class="sun-section">
+          <div class="sun-wrap">
+            <div class="sun"></div>
+            <div class="cloud cloud-a"></div>
+            <div class="cloud cloud-b"></div>
+          </div>
+
+          <div class="pv-power">1842,6 W</div>
+          <div class="pv-label">PV-Erzeugung</div>
+        </section>
+
+        <div class="flow-line gold-flow">
+          <i></i><i></i><i></i>
+        </div>
+
+        <section class="battery-ring">
+          <div class="battery-core">
+            <div class="battery-icon">▣</div>
+            <div class="battery-soc">86,4 %</div>
+            <div class="battery-kwh">4,42 kWh</div>
+            <div class="battery-label">Speicher</div>
+          </div>
+        </section>
+
+        <div class="battery-state">Lädt mit 1284,3 W</div>
+      </section>
+
+      <aside class="health-panel">
+        <div class="health-card temp-ok">
+          <div class="health-title">🌡 Akku</div>
+          <div class="health-value">18,0 °C</div>
+          <div class="health-sub">Temperatur OK</div>
+        </div>
+
+        <div class="health-card">
+          <div class="health-title">Gesundheit</div>
+          <div class="health-value">-- %</div>
+          <div class="health-sub">SOH später</div>
+        </div>
+
+        <div class="health-card">
+          <div class="health-title">Zyklen</div>
+          <div class="health-value">--</div>
+          <div class="health-sub">später</div>
+        </div>
+
+        <div class="health-card">
+          <div class="health-title">Leistung</div>
+          <div class="health-value green">+1284 W</div>
+          <div class="health-sub">Ladevorgang</div>
+        </div>
+      </aside>
+
+    </section>
+
   </main>
 
   <script>

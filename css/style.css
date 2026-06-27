@@ -66,6 +66,15 @@ html, body {
   margin-top: 6px;
 }
 
+.weather-card,
+.ai-status,
+.health-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow: 0 0 42px rgba(0,180,255,0.13);
+  backdrop-filter: blur(16px);
+}
+
 .weather-card {
   min-height: 118px;
   border-radius: 28px;
@@ -73,10 +82,6 @@ html, body {
   display: flex;
   align-items: center;
   gap: 18px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.16);
-  box-shadow: 0 0 42px rgba(0,180,255,0.13);
-  backdrop-filter: blur(16px);
 }
 
 .weather-icon {
@@ -104,8 +109,23 @@ html, body {
   opacity: 0.66;
 }
 
+.ai-status {
+  margin-top: 22px;
+  padding: 22px 28px;
+  border-radius: 28px;
+  font-size: 31px;
+  line-height: 1.25;
+}
+
+.main-grid {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: 1.45fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+}
+
 .energy-column {
-  margin-top: 105px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -282,6 +302,42 @@ html, body {
   background: rgba(0,60,25,0.35);
   border: 1px solid rgba(87,255,75,0.75);
   box-shadow: 0 0 32px rgba(87,255,75,0.22);
+}
+
+.health-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.health-card {
+  border-radius: 28px;
+  padding: 24px;
+  min-height: 128px;
+}
+
+.health-title {
+  font-size: 24px;
+  opacity: 0.82;
+}
+
+.health-value {
+  margin-top: 10px;
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.health-sub {
+  margin-top: 6px;
+  font-size: 21px;
+  opacity: 0.72;
+}
+
+.temp-ok {
+  border-color: rgba(109,255,75,0.75);
+  box-shadow:
+    0 0 45px rgba(109,255,75,0.35),
+    inset 0 0 28px rgba(109,255,75,0.08);
 }
 
 @keyframes sunPulse {
